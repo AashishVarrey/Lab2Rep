@@ -19,15 +19,18 @@ f = 1
 dc = 50
 
 def my_callback(channel):
-  pwm23 = GPIO.PWM(channel,f)
-  pwm23.start(1)
-  print("suck it")
+#  pwm23 = GPIO.PWM(channel,f)
+#  pwm23.start(1)
+  if channel == topbutton:
+    print("top")
+  if channel == bottombutton:
+    print("bottom")
 #  if GPIO.input(channel) == GPIO.HIGH:
-  for x in range(101):
-    pwm.ChangeDutyCycle(x)
-  for y in range(101,0,-1):
-    pwm.ChangeDutyCycle(y)
-  pwm.stop()
+#  for x in range(101):
+#    pwm.ChangeDutyCycle(x)
+#  for y in range(101,0,-1):
+#    pwm.ChangeDutyCycle(y)
+#  pwm.stop()
 #  else:
 #    pass
 
