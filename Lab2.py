@@ -25,7 +25,7 @@ def my_callback(channel):
 #  if GPIO.input(channel) == GPIO.HIGH:
   for x in range(101):
     pwm.ChangeDutyCycle(x)
-  for y in range(101,0,-1)
+  for y in range(101,0,-1):
     pwm.ChangeDutyCycle(y)
   pwm.stop()
 #  else:
