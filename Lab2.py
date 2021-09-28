@@ -20,11 +20,12 @@ dc = 50
 
 def my_callback(channel):
   pwm = GPIO.PWM(channel,f)
-  if GPIO.input(channel) == GPIO.HIGH:
-    for dc in range(101):
-      pwm.ChangeDutyCycle(dc)
-  else:
-    pass
+  print("suck it")
+#  if GPIO.input(channel) == GPIO.HIGH:
+#  for dc in range(101):
+#    pwm.ChangeDutyCycle(dc)
+#  else:
+#    pass
     
 pwm = GPIO.PWM(led3,f)
 
