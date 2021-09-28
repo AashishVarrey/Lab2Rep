@@ -22,6 +22,12 @@ def my_callback(channel):
 #  pwm23 = GPIO.PWM(channel,f)
 #  pwm23.start(1)
   if channel == topbutton:
+    pwm1 = GPIO.PWM(led1,1)
+    for x in range(101):
+      pwm1.ChangeDutyCycle(x)
+    for y in range(101,0,-1):
+      pwm1.ChangeDutyCycle(y)
+    pwm.stop()  
     print("top")
   if channel == bottombutton:
     print("bottom")
