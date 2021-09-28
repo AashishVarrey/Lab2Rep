@@ -19,16 +19,14 @@ f = 1
 dc = 50
 
 def my_callback(channel):
-  pwm = GPIO.PWM(channel,f)
+#  pwm = GPIO.PWM(channel,f)
   print("suck it")
 #  if GPIO.input(channel) == GPIO.HIGH:
 #  for dc in range(101):
 #    pwm.ChangeDutyCycle(dc)
 #  else:
 #    pass
-    
 pwm = GPIO.PWM(led3,f)
-
 try:
     GPIO.add_event_detect(topbutton, GPIO.RISING, callback=my_callback)
     GPIO.add_event_detect(bottombutton, GPIO.RISING, callback=my_callback)
